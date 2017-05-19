@@ -1,0 +1,53 @@
+Video
+	Uri Source			== Location where video can be retrieved from
+	double FPS			== Frame Rate Per Second
+	string Name			== Name of file (Exclude extension)
+	string Codec		== MPEG, H.264, etc
+	string Container	== AVI, MP4 (File extension)
+	TimeSpan Position	== Position of video 
+	int DurationMS		== Total duration of video
+	int WidthPixels		== Width of video frame
+	int HeightPixels	== Height of video frame
+	bool IsSlave		== The video can be controlled by Master Controller
+	
+A window that has components laid on it
+	It is a resizable window
+	Video containers will resize accordingly
+	The Sliders will be as long as the width of a video container
+	The master slider will be as the long width of a video container
+	
+A set of controls will be bound to a video
+	Textbox that will serve as input for getting video source
+		This will be desimenated into Name, Container
+	Label to display extracted FPS rate of video
+	Label to display Codec?
+	Label for size of video frames
+	Checkbox for flag whether video can be controlled by Master Slider
+	A MediaElement to contain the video
+		Source bound to same property as the textbox
+		LoadedBehaviour == manual
+		UnloadedBehaviour == Stop
+	Slider that is bound to progress of video
+		Maximum value; SeekToPosition; MillisecondInterval
+	An image for indicating the video can be played
+		Displayed when the video is open/loaded AND pause or stop button is disabled
+	An image for indicating the video can be paused
+		Displayed when the video is playing 
+	An image for indicating the video can be stopped
+		Displayed when the video is paused or playing
+	Label for displaying time position of video
+		This value adjusts dynamically in synch with play of video and slider seeking
+		The value will also adjusts according to master slider
+	Label for displaying full time length of video
+		
+	
+Master Slider	
+	Slider that is bound to progress of video with longest running video
+		Maximum value; SeekToPosition; MillisecondInterval
+	An image for indicating the attached videos can be played
+		Displayed when a video is open/loaded AND pause or stop button is disabled AND is attached to Master Slider
+	An image for indicating a video can be paused
+		Displayed when the video is playing  AND is attached to Master Slider
+	An image for indicating a video can be stopped
+		Displayed when the video is paused or playing AND is attached to Master Slider
+	
