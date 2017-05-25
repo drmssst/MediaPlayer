@@ -13,11 +13,11 @@ namespace MediaPlayerWpfApp
     /// </summary>
     public partial class App : Application
     {
-        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
-        {
-            MessageBox.Show("An unhandled error has just occurred. Contact the application developer or System Administrator.\n"
-                + e.Exception.Message, "Multiple Videos Player", MessageBoxButton.OK, MessageBoxImage.Error);
-            e.Handled = true;
-        }
+        //private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        //{
+        //    MessageBox.Show("An unhandled error has just occurred. Contact the application developer or System Administrator.\n"
+        //        + e.Exception.Message, "Multiple Videos Player", MessageBoxButton.OK, MessageBoxImage.Error);
+        //    e.Handled = true;
+        //}
     }
 }
